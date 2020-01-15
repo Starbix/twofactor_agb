@@ -1,3 +1,3 @@
-# twofactor_test
+# twofactor_agb
 
-Dummy 2FA provider to test ownCloud's 2FA
+Dummy 2FA provider to prompt for ToS
