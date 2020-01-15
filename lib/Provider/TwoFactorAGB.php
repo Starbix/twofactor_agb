@@ -33,7 +33,7 @@ class TwoFactorAGB implements IProvider {
 	 *
 	 * @return string
 	 */
-	public function getId() {
+	public function getId(): string {
 		return 'agb';
 	}
 
@@ -42,7 +42,7 @@ class TwoFactorAGB implements IProvider {
 	 *
 	 * @return string
 	 */
-	public function getDisplayName() {
+	public function getDisplayName(): string {
 		return 'AGB und Datenschutzbedingungen';
 	}
 
@@ -51,7 +51,7 @@ class TwoFactorAGB implements IProvider {
 	 *
 	 * @return string
 	 */
-	public function getDescription() {
+	public function getDescription(): string {
 		return 'AGB akzeptieren';
 	}
 
@@ -61,7 +61,7 @@ class TwoFactorAGB implements IProvider {
 	 * @param IUser $user
 	 * @return Template
 	 */
-	public function getTemplate(IUser $user) {
+	public function getTemplate(IUser $user): Template {
 		return new Template('twofactor_agb', 'challenge');
 	}
 
@@ -71,7 +71,7 @@ class TwoFactorAGB implements IProvider {
 	 * @param IUser $user
 	 * @param string $challenge
 	 */
-	public function verifyChallenge(IUser $user, $challenge) {
+	public function verifyChallenge(IUser $user, string $challenge): bool {
 		return true;
 	}
 
@@ -81,7 +81,7 @@ class TwoFactorAGB implements IProvider {
 	 * @param IUser $user
 	 * @return boolean
 	 */
-	public function isTwoFactorAuthEnabledForUser(IUser $user) {
+	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		// 2FA is enforced for all users
 		return true;
 	}
