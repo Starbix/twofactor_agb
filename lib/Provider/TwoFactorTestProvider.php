@@ -34,7 +34,7 @@ class TwoFactorTestProvider implements IProvider {
 	 * @return string
 	 */
 	public function getId() {
-		return 'test';
+		return 'agb';
 	}
 
 	/**
@@ -43,7 +43,7 @@ class TwoFactorTestProvider implements IProvider {
 	 * @return string
 	 */
 	public function getDisplayName() {
-		return 'Test';
+		return 'AGB und Datenschutzbedingungen';
 	}
 
 	/**
@@ -52,7 +52,7 @@ class TwoFactorTestProvider implements IProvider {
 	 * @return string
 	 */
 	public function getDescription() {
-		return 'Use a test provider';
+		return 'AGB akzeptieren';
 	}
 
 	/**
@@ -62,7 +62,7 @@ class TwoFactorTestProvider implements IProvider {
 	 * @return Template
 	 */
 	public function getTemplate(IUser $user) {
-		return new Template('twofactor_test', 'challenge');
+		return new Template('twofactor_agb', 'challenge');
 	}
 
 	/**
@@ -72,10 +72,7 @@ class TwoFactorTestProvider implements IProvider {
 	 * @param string $challenge
 	 */
 	public function verifyChallenge(IUser $user, $challenge) {
-		if ($challenge === 'passme') {
-			return true;
-		}
-		return false;
+		return true;
 	}
 
 	/**
