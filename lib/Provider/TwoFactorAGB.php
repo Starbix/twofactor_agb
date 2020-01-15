@@ -20,13 +20,13 @@
  *
  */
 
-namespace OCA\TwoFactor_Test\Provider;
+namespace OCA\TwoFactor_AGB\Provider;
 
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\IUser;
 use OCP\Template;
 
-class TwoFactorTestProvider implements IProvider {
+class TwoFactorAGB implements IProvider {
 
 	/**
 	 * Get unique identifier of this 2FA provider
