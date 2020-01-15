@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <info>
-	<id>twofactor_test</id>
-	<name>Two Factor Test Provider</name>
-	<description>An Two-Factor-Auth Test Provider</description>
+	<id>twofactor_agb</id>
+	<name>AGB prompt</name>
+	<description>User must accept ToS before logging in</description>
 	<licence>AGPL</licence>
-	<author>Christoph Wurst</author>
-	<version>0.0.1</version>
-	<namespace>TwoFactor_Test</namespace>
-	<category>other</category>
+	<author>Cédric Laubacher</author>
+	<version>0.1.0</version>
+	<namespace>TwoFactor_AGB</namespace>
+	<category>security</category>
 	<types>
 		<prelogin/>
 		<authentication/>
 	</types>
 
 	<two-factor-providers>
-		<provider>OCA\TwoFactor_Test\Provider\TwoFactorTestProvider</provider>
+		<provider>OCA\TwoFactor_AGB\Provider\TwoFactorAGB</provider>
 	</two-factor-providers>
 
 	<dependencies>
-		<nextcloud min-version="10" max-version="13" />
+		<nextcloud min-version="16" max-version="17" />
 	</dependencies>
 </info>
